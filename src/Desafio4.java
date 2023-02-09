@@ -13,19 +13,22 @@ public class Desafio4 {
         List<Integer> unicos = new ArrayList<>();
 
         for(int i=0; i < arr.length; i++) {
-            boolean repetido = false;
             int nro = arr[i];
+            boolean repetido = false;
+
             for(int j=0; j < arr.length; j++) {
                 if (j == i)
                     continue;
-                if (nro == arr[j]) {// repetiu
+                if (nro == arr[j]) { // repetiu
                     repetido = true;
                     break;
                 }
             }
-            if (!repetido)
+
+            if (!repetido)  // false
                 unicos.add(nro);
         }
+
         for(Integer n : unicos) {
             System.out.println(n);
         }
